@@ -2,9 +2,10 @@
   "name": "react-ssr",
   "version": "1.0.0",
   "description": "React SSR example.",
-  "main": "index.js",
+  "main": "dist/index.mjs",
   "scripts": {
-    "dev": "tsx watch src/index.tsx"
+    "dev": "tsx watch src/index.tsx",
+    "build": "unbuild"
   },
   "keywords": [],
   "author": {
@@ -21,7 +22,8 @@
     "eslint": "^8.19.0",
     "prettier": "^2.7.1",
     "tsx": "^3.7.1",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "unbuild": "^0.7.4"
   },
   "dependencies": {
     "fastify": "^4.2.0",
