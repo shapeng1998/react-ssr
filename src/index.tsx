@@ -1,16 +1,9 @@
 import React from 'react'
 import Fastify from 'fastify'
 import { renderToString } from 'react-dom/server'
+import { Container } from './client'
 
 const fastify = Fastify({ logger: true })
-
-const App = () => (
-  <html>
-    <body>
-      <h1>Hello World</h1>
-    </body>
-  </html>
-)
 
 fastify.get(
   '/',
@@ -25,7 +18,7 @@ fastify.get(
   },
   async (_request, reply) => {
     reply.header('Content-Type', 'text/html; charset=utf-8')
-    return renderToString(<App />)
+    return renderToString(<Container />)
   }
 )
 
