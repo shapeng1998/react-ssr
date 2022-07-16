@@ -16,7 +16,7 @@ fastify.get(
       },
     },
   },
-  async (_request, reply) => {
+  async (_, reply) => {
     reply.header('Content-Type', 'text/html; charset=utf-8')
     return renderToString(<Container />)
   }
